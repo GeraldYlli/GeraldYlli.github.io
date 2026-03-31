@@ -7,20 +7,14 @@
 
 /* ── Design tokens ───────────────────────────────────── */
 :root {
-  --bg:        #060a1f;        /* very dark blue instead of black-purple */
-    --bg-alt:    #0b122b;        /* slightly lighter dark blue */
-    --surface:   rgba(173,216,230,0.05);  /* soft light blue for surfaces */
-    --surface-h: rgba(173,216,230,0.1);   /* hover effect */
-    --border:    rgba(59,130,246,0.22);   /* blue borders */
-    --border-h:  rgba(59,130,246,0.55);   /* hover border */
-    --accent:    #3b82f6;        /* primary blue accent */
-    --accent-lt: #60a5fa;        /* lighter blue accent */
-    --amber:     #f59e0b;        /* you can keep amber for contrast, optional */
-    --amber-lt:  #fcd34d;        /* lighter amber */
-    --text:      #e8e8f0;        /* same text color works well */
-    --muted:     #8892a4;        /* can stay, it's neutral */
-    --subtle:    #1e2a44;        /* dark blue subtle backgrounds */
-    --glow:      rgba(59,130,246,0.35);   /* blue glow instead of purple */
+        --bg:        #f9fafb;       
+        --bg-alt:    #f3f4f6;        
+        --surface:   #ffffff;        
+        --border:    #b6c6e3;     
+        --border-h:  #1e293b;       
+        --text:      #1e293b;       
+        --subtle:    #e0e7ef;      
+        --glow:      rgba(30,58,138,0.12);
 }
 
 
@@ -67,7 +61,7 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-lt), var(--amber-lt));
+    background: linear-gradient(135deg, var(--text), var(--border-h));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -90,8 +84,8 @@ body {
     position: absolute;
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), var(--amber));
-    box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent);
+    background: linear-gradient(90deg, transparent, var(--text), var(--border-h));
+    box-shadow: 0 0 12px var(--text), 0 0 24px var(--text);
     animation: shootingStar 2.5s ease-in-out;
 }
 .loading-underline::after {
@@ -158,7 +152,7 @@ body {
 }
 .nav-menu a {
     text-decoration: none;
-    color: var(--muted);
+    color: var(--surface);
     font-weight: 500;
     font-size: 0.9rem;
     letter-spacing: 0.02em;
@@ -172,7 +166,7 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background: linear-gradient(90deg, var(--accent), var(--amber));
+    background: linear-gradient(90deg, var(--surface), var(--text));
     transition: width 0.3s ease;
 }
 
@@ -222,7 +216,7 @@ body {
 .hero-greeting {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--accent-lt);
+    color: var(--text);    
     margin-bottom: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -240,21 +234,21 @@ body {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
-    color: var(--muted);
+    color: var(--text);
 }
 .about-text {
     font-size: 0.975rem;
     line-height: 1.75;
-    color: var(--muted);
+    color: var(--text);
     margin-bottom: 2rem;
 }
 .about-text a {
-    color: var(--accent-lt);
+    color: var(--text);
     text-decoration: none;
     border-bottom: 1px solid rgba(139,92,246,0.4);
     transition: border-color 0.2s ease;
 }
-.about-text a:hover { border-color: var(--accent); }
+.about-text a:hover { border-color: var(--text); }
 .hero-links {
     display: flex;
     gap: 0.75rem;
@@ -278,14 +272,14 @@ body {
     border: 1px solid transparent;
 }
 .btn-primary {
-    background: var(--accent);
+    background: var(--text);
     color: #fff;
-    border-color: var(--accent);
+    border-color: var(--text);
     box-shadow: 0 0 20px rgba(139,92,246,0.3);
 }
 .btn-primary:hover {
-    background: var(--accent-lt);
-    border-color: var(--accent-lt);
+    background: var(--text);
+    border-color: var(--text);
     box-shadow: 0 0 28px rgba(139,92,246,0.5);
     transform: translateY(-1px);
 }
@@ -296,7 +290,7 @@ body {
     backdrop-filter: blur(4px);
 }
 .btn-secondary:hover {
-    background: var(--surface-h);
+    background: var(--surface);
     border-color: var(--border-h);
     transform: translateY(-1px);
 }
@@ -326,7 +320,7 @@ body {
     height: 3px;
     width: 100%;
     margin-top: 0.45rem;
-    background: linear-gradient(90deg, var(--accent), var(--accent-lt), transparent);
+    background: linear-gradient(90deg, var(--text), var(--text), transparent);
     border-radius: 2px;
 }
 
@@ -339,12 +333,12 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
-    color: var(--accent-lt);
+    color: var(--text);
     text-transform: uppercase;
     letter-spacing: 0.13em;
     margin-bottom: 1rem;
     padding-left: 0.75rem;
-    border-left: 2px solid var(--accent-lt);
+    border-left: 2px solid var(--text);
 }
 .experience-list {
     display: grid;
@@ -362,7 +356,7 @@ body {
 }
 .experience-item:hover {
     border-color: var(--border-h);
-    background: var(--surface-h);
+    background: var(--surface);
 }
 .experience-content { width: 100%; }
 .experience-title {
@@ -377,18 +371,18 @@ body {
 }
 .experience-title::after {
     content: '↗';
-    color: var(--accent-lt);
+    color: var(--text);
     font-size: 0.875rem;
     margin-left: auto;
     flex-shrink: 0;
 }
 .experience-date {
     font-size: 0.78rem;
-    color: var(--muted);
+    color: var(--text);
     margin-bottom: 0.4rem;
 }
 .experience-description {
-    color: var(--muted);
+    color: var(--text);
     line-height: 1.65;
     margin-bottom: 0.75rem;
     font-size: 0.875rem;
@@ -404,8 +398,7 @@ body {
 .tech-tag {
     display: inline-block;
     padding: 0.2rem 0.6rem;
-    background: rgba(139,92,246,0.1);
-    color: var(--accent-lt);
+    color: var(--text);
     border: 1px solid rgba(139,92,246,0.22);
     font-size: 0.72rem;
     font-weight: 500;
@@ -435,7 +428,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.11em;
-    color: var(--accent-lt);
+    color: var(--text);
     margin-bottom: 0.75rem;
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -456,8 +449,8 @@ body {
     transition: border-color 0.2s ease, color 0.2s ease;
 }
 .skill-tag:hover {
-    border-color: var(--accent);
-    color: var(--accent-lt);
+    border-color: var(--text);
+    color: var(--text);
 }
 
 /* ── Education ───────────────────────────────────────── */
@@ -466,22 +459,13 @@ body {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 1.75rem;
+    padding: 1.25rem;
     margin-bottom: 1rem;
     backdrop-filter: blur(6px);
     position: relative;
     overflow: hidden;
 }
-.education-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--accent), var(--accent-lt));
-    border-radius: 4px 0 0 4px;
-}
+
 .education-degree {
     font-size: 1.1rem;
     font-weight: 700;
@@ -491,12 +475,12 @@ body {
 }
 .education-institution {
     font-size: 0.9rem;
-    color: var(--accent-lt);
+    color: var(--text);
     font-weight: 500;
     margin-bottom: 0.2rem;
 }
 .education-year {
-    color: var(--muted);
+    color: var(--text);
     font-size: 0.8rem;
 }
 
@@ -504,7 +488,7 @@ body {
 .contact-content { text-align: left; }
 .contact-content > p {
     font-size: 0.975rem;
-    color: var(--muted);
+    color: var(--text);
     margin-bottom: 2rem;
 }
 .contact-links {
@@ -530,14 +514,14 @@ body {
     transition: all 0.25s ease;
 }
 .contact-link:hover {
-    background: var(--surface-h);
+    background: var(--surface);
     border-color: var(--border-h);
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(139,92,246,0.2);
 }
 .contact-link::after {
     content: '↗';
-    color: var(--accent-lt);
+    color: var(--text);
     margin-left: 0.2rem;
     font-size: 0.95rem;
 }
@@ -552,21 +536,21 @@ body {
     border-top: 1px solid var(--border);
     padding: 2rem 0;
     text-align: center;
-    color: var(--muted);
+    color: var(--text);
 }
 .footer p {
     font-size: 0.8rem;
     margin-bottom: 0.4rem;
 }
 .footer-link a {
-    color: var(--muted);
+    color: var(--text);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.8rem;
     letter-spacing: 0.04em;
     transition: color 0.2s ease;
 }
-.footer-link a:hover { color: var(--accent-lt); }
+.footer-link a:hover { color: var(--text); }
 
 /* ── Scroll reveal ───────────────────────────────────── */
 @keyframes fadeInUp {
