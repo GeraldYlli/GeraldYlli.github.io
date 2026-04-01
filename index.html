@@ -6,6 +6,7 @@
     <meta name="description" content="Gerald Ylli - Portfolio">
     <title>Gerald Ylli - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -29,6 +30,12 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle dark mode">
+                <span class="theme-toggle__label" id="themeLabel">Light</span>
+                <div class="theme-toggle__track">
+                    <div class="theme-toggle__thumb"></div>
+                </div>
+            </div>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>

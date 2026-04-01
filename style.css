@@ -17,6 +17,17 @@
         --glow:      rgba(30,58,138,0.12);
 }
 
+html.dark {
+        --bg:        #0f172a;
+        --bg-alt:    #111827;
+        --surface:   #1e293b;
+        --border:    #334155;
+        --border-h:  #94a3b8;
+        --text:      #f1f5f9;
+        --subtle:    #2d3748;
+        --glow:      rgba(148,163,184,0.12);
+}
+
 
 /* ── Base ────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
@@ -141,8 +152,9 @@ body {
 }
 .navbar .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-menu {
@@ -173,6 +185,51 @@ body {
 .nav-menu a:hover::after {
     width: 100%;
 }
+.theme-toggle {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+}
+.theme-toggle__label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #f1f5f9;
+    letter-spacing: 0.04em;
+    min-width: 2.6rem;
+    text-align: right;
+}
+.theme-toggle__track {
+    width: 36px;
+    height: 20px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    position: relative;
+    transition: background 0.25s ease;
+    flex-shrink: 0;
+}
+html.dark .theme-toggle__track {
+    background: rgba(148,163,184,0.35);
+    border-color: rgba(148,163,184,0.5);
+}
+.theme-toggle__thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    transition: transform 0.25s ease;
+}
+html.dark .theme-toggle__thumb {
+    transform: translateX(16px);
+}
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -184,7 +241,7 @@ body {
 .nav-toggle span {
     width: 24px;
     height: 2px;
-    background: var(--text);
+    background: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -512,12 +569,7 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(139,92,246,0.2);
 }
-.contact-link::after {
-    content: '↗';
-    color: var(--text);
-    margin-left: 0.2rem;
-    font-size: 0.95rem;
-}
+
 .contact-link svg {
     width: 20px;
     height: 20px;
@@ -545,6 +597,14 @@ body {
 }
 .footer-link a:hover { color: var(--text); }
 
+/* ── Dark mode overrides ─────────────────────────────── */
+html.dark .nav-menu a {
+    color: #f1f5f9;
+}
+html.dark .nav-menu a::after {
+    background: linear-gradient(90deg, #f1f5f9, #94a3b8);
+}
+
 /* ── Scroll reveal ───────────────────────────────────── */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -569,7 +629,7 @@ body {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 48px;
+        top: 52px;
         flex-direction: column;
         background: rgba(6,6,15,0.97);
         backdrop-filter: blur(18px);
@@ -583,6 +643,13 @@ body {
     .nav-menu.active { left: 0; }
     .nav-menu li { padding: 1rem 0; }
     .nav-toggle { display: flex; }
+    .theme-toggle {
+        position: static;
+        margin-right: auto;
+    }
+    .theme-toggle__label {
+        text-align: left;
+    }
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2.5rem;
