@@ -31,8 +31,10 @@ function setupScrollReveal() {
     };
 
     addReveal('.section-title');
+    addReveal('.games-intro');
     addReveal('.experience-group', 100);
     addReveal('.skill-category', 80);
+    addReveal('.project-link', 40);
     addReveal('.education-item', 100);
     addReveal('.contact-link', 100);
 }
