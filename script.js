@@ -32,6 +32,8 @@ function setupScrollReveal() {
 
     addReveal('.section-title');
     addReveal('.games-intro');
+    addReveal('.ai-intro');
+    addReveal('.ai-block', 100);
     addReveal('.experience-group', 100);
     addReveal('.skill-category', 80);
     addReveal('.project-link', 40);

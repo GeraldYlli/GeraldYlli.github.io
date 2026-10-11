@@ -6,7 +6,7 @@
     <meta name="description" content="Gerald Ylli - Portfolio">
     <title>Gerald Ylli - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script>if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');</script>
+    <script>try{if(localStorage.getItem('theme')!=='light')document.documentElement.classList.add('dark');}catch(e){document.documentElement.classList.add('dark');}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
         <div class="container">
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
+                <li><a href="#ai">AI</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -51,12 +52,108 @@
         <div class="container">
             <div class="hero-content">
                 <div>
-                    <p class="hero-greeting">Hi, I'm Gerald.</p>
-                    <h1 class="hero-title">Frontend Dev</h1>
+                    <p class="hero-greeting">Hi, I'm Geri.</p>
+                    <h1 class="hero-title">Frontend Engineer</h1>
                     <p class="hero-subtitle">Tirana, Albania</p>
                     <div class="about-text">
                         <p>I’m passionate about building things that make a difference. I’m attentive to detail, motivated by goals, and enjoy working in a team. I’m always open to learning and exchanging ideas to improve the outcome.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Section -->
+    <section id="ai" class="section ai-section">
+        <div class="container">
+            <h2 class="section-title">Working with AI</h2>
+            <p class="ai-intro">AI is part of how I work every day, but it works the way I do. I use Claude Code and Cursor as coding partners and give them clear rules, reusable skills and project context, so they follow the same process I would. I make the decisions and review every change.</p>
+
+            <!-- Workflow -->
+            <div class="ai-block">
+                <h3 class="experience-group-title">My workflow</h3>
+                <ol class="ai-flow">
+                    <li class="ai-step">
+                        <span class="ai-step__num">01</span>
+                        <h4 class="ai-step__title">Understand</h4>
+                        <p class="ai-step__text">A client message or ticket becomes an agreed approach and a clear definition of done, before any code is written.</p>
+                    </li>
+                    <li class="ai-step">
+                        <span class="ai-step__num">02</span>
+                        <h4 class="ai-step__title">Plan</h4>
+                        <p class="ai-step__text">Larger tasks are split into ordered build steps, so the work stays small and easy to review.</p>
+                    </li>
+                    <li class="ai-step">
+                        <span class="ai-step__num">03</span>
+                        <h4 class="ai-step__title">Build</h4>
+                        <p class="ai-step__text">Agents write code on a feature branch, run the site in a browser and check the result in light and dark mode and on mobile.</p>
+                    </li>
+                    <li class="ai-step">
+                        <span class="ai-step__num">04</span>
+                        <h4 class="ai-step__title">Review</h4>
+                        <p class="ai-step__text">Every diff gets a correctness, simplification and security review. Then I read it myself.</p>
+                    </li>
+                    <li class="ai-step">
+                        <span class="ai-step__num">05</span>
+                        <h4 class="ai-step__title">Share</h4>
+                        <p class="ai-step__text">Finished work becomes documentation the team and client can read, plus a short update for the team.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Skills -->
+            <div class="ai-block">
+                <h3 class="experience-group-title">Skills I use</h3>
+                <p class="ai-block__lead">Skills are reusable instructions that teach the agent a specific part of my process. Each one is called on its own, when that step comes up.</p>
+                <div class="ai-skills">
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/start-task</h4>
+                        <p class="ai-skill__text">Turns a new request into an agreed approach and writes down what "done" means before we branch.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/writing-plans</h4>
+                        <p class="ai-skill__text">Breaks an approved large task into an ordered build plan before any code is written.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/code-review</h4>
+                        <p class="ai-skill__text">Reviews the current diff or a pull request for bugs, and can apply the fixes it finds.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/simplify</h4>
+                        <p class="ai-skill__text">Cleans up changed code by reusing what already exists and removing what isn't needed.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/security-review</h4>
+                        <p class="ai-skill__text">Checks the changes on a branch for security issues before they go anywhere near live.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/run</h4>
+                        <p class="ai-skill__text">Launches the project and drives it in a browser to confirm a change actually works.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/document-feature</h4>
+                        <p class="ai-skill__text">Writes up a shipped feature as a shared doc for QA, support or the client.</p>
+                    </div>
+                    <div class="ai-skill">
+                        <h4 class="ai-skill__name">/standup-update</h4>
+                        <p class="ai-skill__text">Writes the short Tuesday and Thursday update about what I worked on.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="ai-block">
+                <h3 class="experience-group-title">Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Claude Code</span>
+                    <span class="skill-tag">Cursor</span>
+                    <span class="skill-tag">AI Agents</span>
+                    <span class="skill-tag">Subagents</span>
+                    <span class="skill-tag">Custom Skills</span>
+                    <span class="skill-tag">MCP</span>
+                    <span class="skill-tag">GitKraken MCP</span>
+                    <span class="skill-tag">Browser Automation</span>
+                    <span class="skill-tag">Project Memory</span>
                 </div>
             </div>
         </div>
@@ -68,9 +165,9 @@
             <h2 class="section-title">Experience</h2>
         
 
-            <!-- Frontend Development -->
+            <!-- Frontend Engineer -->
             <div class="experience-group">
-                <h3 class="experience-group-title">Frontend Development</h3>
+                <h3 class="experience-group-title">Frontend Engineer</h3>
                 <div class="experience-list">
                     <div class="experience-item">
                         <div class="experience-content">
@@ -91,7 +188,23 @@
                             </div>
                         </div>
                     </div>
-                    
+
+                    <div class="experience-item">
+                        <div class="experience-content">
+                            <h3 class="experience-title">Backend</h3>
+                            <p class="experience-description">Built features end to end on a Laravel API that powers a web app and a mobile app. Added new API endpoints, database tables and data models, sent emails and notifications, ran slow work in background jobs and scheduled tasks, and wrote tests so each feature keeps working after future changes.</p>
+                            <div class="experience-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Background Jobs</span>
+                                <span class="tech-tag">Emails & Notifications</span>
+                                <span class="tech-tag">Pest</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="experience-item">
                         <div class="experience-content">
                             <h3 class="experience-title">BigCommerce</h3>
@@ -181,7 +294,9 @@
                         <span class="skill-tag">HTML</span>
                         <span class="skill-tag">CSS</span>
                         <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
                         <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
                         <span class="skill-tag">jQuery</span>
                         <span class="skill-tag">SASS</span>
                         <span class="skill-tag">SCSS</span>
@@ -193,6 +308,36 @@
                         <span class="skill-tag">Elementor</span>
                          <span class="skill-tag">Animate</span>
                         <span class="skill-tag">Mobile First Design</span>
+                        <span class="skill-tag">Vitest</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Back-end</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Eloquent ORM</span>
+                        <span class="skill-tag">Migrations</span>
+                        <span class="skill-tag">Queues & Jobs</span>
+                        <span class="skill-tag">Task Scheduling</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Pest</span>
+                        <span class="skill-tag">SendGrid</span>
+                        <span class="skill-tag">Stripe</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Mobile</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">BLoC</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Google Maps</span>
+                        <span class="skill-tag">Android</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -232,6 +377,20 @@
                         <span class="skill-tag">AI Agents</span>
                         <span class="skill-tag">Debugging</span>
                         <span class="skill-tag">Testing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude Code</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">AI Agents</span>
+                        <span class="skill-tag">Subagents</span>
+                        <span class="skill-tag">Custom Skills</span>
+                        <span class="skill-tag">MCP</span>
+                        <span class="skill-tag">AI Code Review</span>
+                        <span class="skill-tag">Browser Automation</span>
+                        <span class="skill-tag">Project Memory</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -275,6 +434,8 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-list">
+                <a href="https://trampgps.com/" target="_blank" rel="noopener noreferrer" class="project-link">Tramp</a>
+                <a href="https://play.google.com/store/apps/details?id=com.trampgps.app&amp;hl=en" target="_blank" rel="noopener noreferrer" class="project-link">Tramp App</a>
                 <a href="https://mystore.ferrari.com/" target="_blank" rel="noopener noreferrer" class="project-link">Ferrari Event Management</a>
                 <a href="https://www.trony.it/" target="_blank" rel="noopener noreferrer" class="project-link">Trony</a>
                 <a href="https://milanairportsboutique.com/" target="_blank" rel="noopener noreferrer" class="project-link">Milano Airport</a>
@@ -330,6 +491,13 @@
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                         LinkedIn
+                    </a>
+                    <a href="mailto:geriylli7@gmail.com" class="contact-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 7-10 6L2 7"/>
+                        </svg>
+                        geriylli7@gmail.com
                     </a>
                 </div>
             </div>

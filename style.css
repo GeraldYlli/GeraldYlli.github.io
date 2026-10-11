@@ -456,6 +456,112 @@ html.dark .theme-toggle__thumb {
     border-radius: 6px;
 }
 
+/* ── AI ──────────────────────────────────────────────── */
+.ai-section {
+    border-top: 1px solid var(--border);
+}
+.ai-intro {
+    font-size: 0.975rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+    max-width: 42rem;
+}
+.ai-block {
+    margin-bottom: 3rem;
+}
+.ai-block:last-child { margin-bottom: 0; }
+.ai-block__lead {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 1rem;
+    max-width: 42rem;
+}
+
+/* Workflow: connected steps */
+.ai-flow {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    position: relative;
+}
+.ai-flow::before {
+    content: '';
+    position: absolute;
+    top: 1.55rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    height: 1px;
+    background: var(--border);
+}
+.ai-step {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.ai-step:hover {
+    border-color: var(--border-h);
+    transform: translateY(-3px);
+}
+.ai-step__num {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.1rem 0.45rem;
+    border-radius: 6px;
+    background: var(--text);
+    color: var(--bg);
+    margin-bottom: 0.6rem;
+}
+.ai-step__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--text);
+}
+.ai-step__text {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--text);
+}
+
+/* Skills: command cards */
+.ai-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+}
+.ai-skill {
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--text);
+    border-radius: 10px;
+    background: var(--surface);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.ai-skill:hover {
+    border-color: var(--border-h);
+    transform: translateY(-2px);
+}
+.ai-skill__name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+.ai-skill__text {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--text);
+}
+
 /* ── Games ───────────────────────────────────────────── */
 .games-intro {
     font-size: 0.975rem;
@@ -723,6 +829,15 @@ html.dark .nav-menu a::after {
     .section { padding: 2rem 0; }
     .section-title { font-size: 2rem; }
     .skills-grid { grid-template-columns: 1fr; }
+    .ai-flow { grid-template-columns: 1fr; }
+    .ai-flow::before {
+        top: 1.25rem;
+        bottom: 1.25rem;
+        left: 1.6rem;
+        right: auto;
+        width: 1px;
+        height: auto;
+    }
 }
 @media (max-width: 480px) {
     .hero { padding: 2.5rem 0; }
